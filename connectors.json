@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Kickbox",
+    "title": "Kickbox",
+    "description": "Interact with the Kickbox.io API",
+    "version": "1.0",
+    "tags": [
+      "service"
+    ],
+    "icon": {
+      "type": "url",
+      "value": "//s3.amazonaws.com/images.tray.io/static/icons/placeholder.png"
+    },
+    "messages": [
+      {
+        "name": "sample_message",
+        "title": "Sample message",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "api_key": {
+              "type": "string",
+              "default_jsonpath": "$.auth.api_key",
+              "title": "Api key"
+            }
+          },
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "required": [
+            "api_key"
+          ],
+          "advanced": [
+            "api_key"
+          ],
+          "additionalProperties": false
+        },
+        "output_schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "boolean"
+                },
+                "free": {
+                  "type": "boolean"
+                },
+                "disposable": {
+                  "type": "boolean"
+                },
+                "accept_all": {
+                  "type": "boolean"
+                },
+                "did_you_mean": {
+                  "type": "string"
+                },
+                "sendex": {
+                  "type": "number"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "domain": {
+                  "type": "string"
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "message": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+]
